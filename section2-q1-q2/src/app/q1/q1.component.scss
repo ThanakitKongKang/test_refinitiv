@@ -1,0 +1,7 @@
+$breakpoint: 600px;
+
+@media (max-width: $breakpoint) {
+  .q1-wrapper {
+    overflow: scroll;
+  }
+}
