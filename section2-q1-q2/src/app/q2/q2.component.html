@@ -1,10 +1,18 @@
-<div class="jumbotron mx-auto w-50">
+<div class="jumbotron mx-auto w-50" style="max-height: 60rem; overflow-y: scroll;">
   <div class="mb-4 d-flex align-items-center">
     <input type="text" class="form-control w-50 d-inline-block mr-4" [(ngModel)]="input" (ngModelChange)="filter()"
       placeholder="Search...">
-    <div *ngIf="isLoading" class="spinner-border text-dark" role="status">
+
+    <div *ngIf="isLoading; else elseBlock" class="spinner-border text-dark" role="status">
       <span class="sr-only">Loading...</span>
     </div>
+
+    <div>
+      <ng-template #elseBlock>
+        {{filteredCategories.length}} result{{filteredCategories.length > 1 ? 's' : null}}
+      </ng-template>
+    </div>
+
 
   </div>
 
