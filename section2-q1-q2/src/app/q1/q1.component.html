@@ -1,10 +1,10 @@
 <div class="jumbotron mx-auto w-100 q1-wrapper">
   <div class="d-flex">
-    <div [style]='leftStyle' class="bg-light">
+    <div [style]='leftStyle'>
       <input type="text" class="form-control" [(ngModel)]="input" (ngModelChange)="calculationChanged()">
     </div>
 
-    <div [style]='centerStyle' class="text-white mx-3">
+    <div [style]='centerStyle' class="mx-3">
       <select class="form-control" [(ngModel)]="selectedCal" (ngModelChange)="calculationChanged()">
         <option *ngFor="let cal of calModes" [ngValue]="cal">{{cal}}</option>
       </select>
